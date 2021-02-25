@@ -1,0 +1,31 @@
+.checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .input {
+        display: none;
+    }
+    .label {
+        display: flex;
+        align-items: center;
+        position: relative;
+        min-width: 250px;
+    }
+    .text {
+        position: absolute;
+        left: 35px;
+    }
+    .icon {
+        display: block;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+.checkboxActive {
+    background: url("../images/checkboxchecked.svg") 0px center no-repeat;
+}
+.checkboxNotActive {
+    background: url("../images/checkbox.svg") 0px center no-repeat;
+}

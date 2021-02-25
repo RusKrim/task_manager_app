@@ -1,0 +1,22 @@
+.task {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin: 0px 30px;
+  background-color: #FFFFFF;
+  border: none;
+  border-bottom: 1px solid #E8ECEF;
+  cursor: pointer;
+  &:first-child {
+    margin-top: 10px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  p {
+    margin-left: auto;
+  }
+}
+

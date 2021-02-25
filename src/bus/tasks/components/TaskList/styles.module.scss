@@ -1,0 +1,20 @@
+.taskList {
+  background-color: #FFFFFF;
+  height: 100%;
+  flex-basis: 50%;
+}
+
+.full {
+  flex-basis: 100%;
+}
+.normal {
+  flex-basis: 50%;
+  margin-right: 41px;
+}
+
+.img {
+  background: url("../../../../images/illustration.png") center no-repeat;
+  background-size: cover;
+  min-height: 300px;
+  width: 100%;
+}

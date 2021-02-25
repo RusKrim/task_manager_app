@@ -1,0 +1,8 @@
+.radio__group {
+    display: flex;
+    flex-direction: column;
+    .title {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+  }
