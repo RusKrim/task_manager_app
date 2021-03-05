@@ -55,7 +55,13 @@ export const TaskForm = ({ isOpenned }) => {
               setFieldValue,
               setValues,
             } = props;
-            const { taskTitle, description, checklist, deadline } = values;
+            const {
+              taskTitle,
+              description,
+              checklist: [title, completed],
+              deadline,
+            } = values;
+            console.log(title);
 
             const setTag = (tag) => {
               setFieldValue("tag", tag);
@@ -132,6 +138,15 @@ export const TaskForm = ({ isOpenned }) => {
                     onClick={completeTask}
                     getFieldProps={getFieldProps}
                     box={box}
+                    onChange={handleChange}
+                  />
+                  <InputField
+                    label="Title for add more"
+                    name="title"
+                    type="text"
+                    placeholder="Описание"
+                    value={title}
+                    onChange={handleChange}
                   />
                   {tagsJSX}
                   <button type="submit" className={styles.button}>

@@ -1,15 +1,17 @@
-import {useDispatch} from 'react-redux';
+import { useDispatch } from "react-redux";
 
-import {taskActions} from '../../actions';
+import { taskActions } from "../../actions";
 
 export const useCreateTask = () => {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-    const saveTask = (task) => {
-        dispatch(taskActions.createTask(task));
+  const saveTask = (task) => {
+    if (!task.hash) {
+      dispatch(taskActions.createTask(task));
     }
+  };
 
-    return {
-        saveTask
-    }
-}
+  return {
+    saveTask,
+  };
+};

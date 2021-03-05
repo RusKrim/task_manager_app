@@ -3,7 +3,6 @@ import { types } from "./types";
 const initialState = {
   selectedTask: null,
   dataArray: [],
-  kek: [],
   error: false,
   isLoading: false,
   isFetching: false,
@@ -13,7 +12,8 @@ const initialState = {
 export const tasksReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case types.TASK_CREATE:
-      return { ...state, kek: [...state.dataArray, payload] };
+      console.log(...state.dataArray);
+      return { ...state, dataArray: [...state.dataArray, payload] };
     case types.TASK_TOGGLE_FORM:
       return { ...state, isFormOpenned: payload };
     case types.TASK_EDIT:
